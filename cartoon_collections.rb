@@ -6,7 +6,8 @@ end
 def summon_captain_planet(calls) #input is an array of calls to it
   #using regex and collect to change each of them and .gsub
   calls.collect do |call|
-    call.gsub
+    call.gsub(/\w+/) {|w| w.capitalize + "!"}
+  end
 end
 
 def long_planeteer_calls# code an argument here
