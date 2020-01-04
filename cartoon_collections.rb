@@ -12,7 +12,7 @@ end
 
 def long_planeteer_calls(calls) #takes in assorted planeteer calls
   #Uses find and match and regex to see if any longer than 4 characters
-  calls.find do |call|
+  calls.any? do |call|
     call.match(/\w{5,}/)
   end
 end
