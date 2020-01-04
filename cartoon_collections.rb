@@ -10,8 +10,11 @@ def summon_captain_planet(calls) #input is an array of calls to it
   end
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+def long_planeteer_calls(calls) #takes in assorted planeteer calls
+  #Uses find and match and regex to see if any longer than 4 characters
+  calls.find do |call|
+    call.match(/\w{5,}/)
+  end
 end
 
 def find_the_cheese# code an argument here
