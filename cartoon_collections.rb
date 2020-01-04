@@ -11,13 +11,16 @@ def summon_captain_planet(calls) #input is an array of calls to it
 end
 
 def long_planeteer_calls(calls) #takes in assorted planeteer calls
-  #Uses find and match and regex to see if any longer than 4 characters
+  #Uses any? and match and regex to see if any longer than 4 characters
   calls.any? do |call|
     call.match(/\w{5,}/)
   end
 end
 
-def find_the_cheese# code an argument here
+def find_the_cheese(array) #array containing different foods
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
+  cheese_types.find do |cheese|
+    array.any? {|item| item == cheese}
+  end
 end
